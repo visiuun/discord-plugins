@@ -4,6 +4,7 @@ Userplugins for [Equicord](https://github.com/Equicord/Equicord) and [Testcord](
 
 | Plugin | What it does |
 |---|---|
+| [BetterDownload](betterDownload.desktop) | Download every file in a message at once, straight to a folder. Menu item, hover button and `V` hotkey, filename templates, plus avatars, banners, server icons, emojis, stickers and whole channels. |
 | [NotificationSounds](notificationSounds) | Different notification sounds for DMs, group DMs, pings, reply pings, role pings, @everyone, @here, threads and more. Upload your own sounds or pick Discord's. |
 
 ## Install

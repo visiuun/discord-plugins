@@ -1,0 +1,63 @@
+#bd-pill {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: min(420px, 80vw);
+    padding: 4px 12px 4px 4px;
+    border: 1px solid var(--border-subtle, rgb(255 255 255 / 10%));
+    border-radius: 999px;
+    background: var(--background-floating, #111);
+    box-shadow: 0 4px 16px rgb(0 0 0 / 40%);
+    color: var(--text-normal, #fff);
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -8px);
+    transition: opacity 0.15s, transform 0.15s;
+}
+
+#bd-pill.bd-show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+#bd-pill img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#bd-pill .bd-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px 0 8px;
+    border-radius: 50%;
+    background: var(--status-positive, #3ba55c);
+}
+
+#bd-pill.bd-busy .bd-dot {
+    background: var(--text-muted, #999);
+    animation: bd-pulse 0.8s ease-in-out infinite alternate;
+}
+
+#bd-pill.bd-warn .bd-dot { background: var(--status-warning, #faa61a); }
+#bd-pill.bd-fail .bd-dot { background: var(--status-danger, #ed4245); }
+
+#bd-pill span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@keyframes bd-pulse {
+    to { opacity: 0.3; }
+}
